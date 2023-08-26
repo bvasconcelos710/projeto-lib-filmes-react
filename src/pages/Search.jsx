@@ -16,11 +16,11 @@ const Search = () => {
     const getSearchedMovies = async (url) => {
         const res = await fetch(url);
         const data = await res.json();
-        setMovies(data.results);
+        setMovies(data.results || []);
     };
 
     useEffect(() => {
-        const searchWithQueryURL = `${searchURL}?${apiKey}&query=${query}`;
+        const searchWithQueryURL = `${searchURL}?query=${query}&${apiKey}`;
         getSearchedMovies(searchWithQueryURL);
     }, [query]);
 

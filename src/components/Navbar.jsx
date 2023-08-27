@@ -20,7 +20,7 @@ const Navbar = () => {
     return (
         <nav id="navbar">
             <h2>
-                <Link to="/">
+                <Link to="/projeto-lib-filmes-react/">
                     <BiCameraMovie /> MoviesLib
                 </Link>
             </h2>
